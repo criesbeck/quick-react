@@ -1,0 +1,642 @@
+{
+  "year": "2018-2019",
+  "courses": [
+    {
+      "id": "F101",
+      "title": "Computer Science: Concepts, Philosophy, and Connections",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "F110",
+      "title": "Intro Programming for non-majors",
+      "days": "MWF",
+      "start": "10:00",
+      "end": "10:50"
+    },
+    {
+      "id": "W110",
+      "title": "Intro Programming for non-majors",
+      "days": "TuTh",
+      "start": "16:00",
+      "end": "17:20"
+    },
+    {
+      "id": "S110",
+      "title": "Intro Programming for non-majors",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "S130",
+      "title": "Tools and Technologies of the Web",
+      "days": "MW",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "F111",
+      "title": "Fundamentals of Computer Programming I",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "W111",
+      "title": "Fundamentals of Computer Programming I",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "S111",
+      "title": "Fundamentals of Computer Programming I",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "F211",
+      "title": "Fundamentals of Computer Programming II",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "W211",
+      "title": "Fundamentals of Computer Programming II",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "S211",
+      "title": "Fundamentals of Computer Programming II",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "F212",
+      "title": "Discrete math",
+      "days": "MWF",
+      "start": "15:00",
+      "end": "15:50"
+    },
+    {
+      "id": "W212",
+      "title": "Discrete math",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "S212",
+      "title": "Discrete math",
+      "days": "MWF",
+      "start": "15:00",
+      "end": "15:50"
+    },
+    {
+      "id": "F213-1",
+      "title": "Intro to systems",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "F213-2",
+      "title": "Intro to systems",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "W213",
+      "title": "Intro to systems",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "S213",
+      "title": "Intro to systems",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "F214",
+      "title": "Data structures",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "W214",
+      "title": "Data structures",
+      "days": "TuTh",
+      "start": "16:00",
+      "end": "17:20"
+    },
+    {
+      "id": "S214",
+      "title": "Data structures",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "F217",
+      "title": "Data management and information processing",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "S217",
+      "title": "Data management and information processing",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "W230",
+      "title": "Programming for engineers",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "F295",
+      "title": "IPD",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "13:50"
+    },
+    {
+      "id": "S295",
+      "title": "Fundamentals of Programming 1.5",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "S313",
+      "title": "Tangible Interaction Design and Learning",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "S314",
+      "title": "Tech & Human Interaction",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "F321",
+      "title": "Programming languages",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "W321",
+      "title": "Programming languages",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "S321",
+      "title": "Programming languages",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "W322",
+      "title": "Compilers",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "S323",
+      "title": "Code Analysis and Transformation",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "F325",
+      "title": "AI Programming",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "F330",
+      "title": "HCI",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "W330",
+      "title": "HCI",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "S330",
+      "title": "HCI",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "W331",
+      "title": "Intro. Computation Phototography",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "F336",
+      "title": "Algorithms",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "W336",
+      "title": "Algorithms",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "S336",
+      "title": "Algorithms",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "W337",
+      "title": "Semantic Information Processing",
+      "days": "MWF",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "F338",
+      "title": "Practicum",
+      "days": "M",
+      "start": "6:00",
+      "end": "9:00"
+    },
+    {
+      "id": "S338",
+      "title": "Practicum",
+      "days": "M",
+      "start": "6:00",
+      "end": "9:00"
+    },
+    {
+      "id": "F339",
+      "title": "Databases",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "W339",
+      "title": "Databases",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "S339",
+      "title": "Databases",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "F340",
+      "title": "Networking",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "W340",
+      "title": "Networking",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "F343",
+      "title": "Operating Systems",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "W343",
+      "title": "Operating Systems",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "11:50"
+    },
+    {
+      "id": "S345",
+      "title": "Distributed Systems",
+      "days": "TuTh",
+      "start": "9:00",
+      "end": "10:20"
+    },
+    {
+      "id": "F348",
+      "title": "AI",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "W348",
+      "title": "AI",
+      "days": "MWF",
+      "start": "15:00",
+      "end": "15:50"
+    },
+    {
+      "id": "S348",
+      "title": "AI",
+      "days": "TuTh",
+      "start": "9:00",
+      "end": "10:20"
+    },
+    {
+      "id": "F349",
+      "title": "ML",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "W349",
+      "title": "ML",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "S349",
+      "title": "ML",
+      "days": "MWF",
+      "start": "13:00",
+      "end": "13:50"
+    },
+    {
+      "id": "W351-1",
+      "title": "Intro graphics",
+      "days": "MWF",
+      "start": "10:00",
+      "end": "10:50"
+    },
+    {
+      "id": "S351-2",
+      "title": "Intermediate CG",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "F354",
+      "title": "Network Penetration and Security",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "W371",
+      "title": "Knowledge Representation and Reasoning",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "F376",
+      "title": "Game Design and Development",
+      "days": "MWF",
+      "start": "15:00",
+      "end": "15:50"
+    },
+    {
+      "id": "W397-1",
+      "title": "Game Design Studio",
+      "days": "MW",
+      "start": "18:00",
+      "end": "19:30"
+    },
+    {
+      "id": "F393",
+      "title": "Software Construction",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "W394",
+      "title": "Software Project Management and Development",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "S394",
+      "title": "Software Project Management and Development",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "W396-1",
+      "title": "Introduction to cryptography",
+      "days": "MWF",
+      "start": "15:00",
+      "end": "15:50"
+    },
+    {
+      "id": "F396-1",
+      "title": "Swarms and Multi-Robot Systems",
+      "days": "TuTh",
+      "start": "14:00",
+      "end": "15:20"
+    },
+    {
+      "id": "S396-1",
+      "title": "Operational Semantics",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "W396-2",
+      "title": "Quadrotor design and control",
+      "days": "Th",
+      "start": "14:00",
+      "end": "17:00"
+    },
+    {
+      "id": "W396-3",
+      "title": "Data Science Seminar",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "S396-2",
+      "title": "Systems Programming in Rust",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "S396-3",
+      "title": "Affective Computing Seminar",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "S396-4",
+      "title": "Proving Properties of Programs",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "W396-4",
+      "title": "Programming Language Seminar",
+      "days": "TuTh",
+      "start": "12:30",
+      "end": "13:50"
+    },
+    {
+      "id": "F396-2",
+      "title": "Advanced topics in compilers",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "S396-5",
+      "title": "Topics in Software Engineering",
+      "days": "TuTh",
+      "start": "3:30",
+      "end": "4:50"
+    },
+    {
+      "id": "W397-2",
+      "title": "Digital Forensics",
+      "days": "MW",
+      "start": "10:00",
+      "end": "11:20"
+    },
+    {
+      "id": "W397-3",
+      "title": "Internet-Scale Experimentation",
+      "days": "MW",
+      "start": "10:00",
+      "end": "13:00"
+    },
+    {
+      "id": "S397",
+      "title": "Comp. Photography Seminar",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "19:00"
+    },
+    {
+      "id": "W397-4",
+      "title": "Wireless and Mobile Health",
+      "days": "TuTh",
+      "start": "5:00",
+      "end": "6:20"
+    },
+    {
+      "id": "S450",
+      "title": "Internet Security",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    },
+    {
+      "id": "S446",
+      "title": "Kernel and Other Low-level Software Development",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "S496-1",
+      "title": "Special Topics in Game AI",
+      "days": "MWF",
+      "start": "16:00",
+      "end": "16:50"
+    },
+    {
+      "id": "F496-1",
+      "title": "Modern cryptography",
+      "days": "MWF",
+      "start": "10:00",
+      "end": "10:50"
+    },
+    {
+      "id": "W473-1",
+      "title": "NUVention Web+Media",
+      "days": "Tu",
+      "start": "14:00",
+      "end": "17:00"
+    },
+    {
+      "id": "S473-2",
+      "title": "NUVention Web+Media",
+      "days": "Tu",
+      "start": "14:00",
+      "end": "17:10"
+    },
+    {
+      "id": "S496-2",
+      "title": "Mechanism Design",
+      "days": "TuTh",
+      "start": "9:30",
+      "end": "10:50"
+    },
+    {
+      "id": "F496-2",
+      "title": "Approximation Algorithms",
+      "days": "TuTh",
+      "start": "11:00",
+      "end": "12:20"
+    },
+    {
+      "id": "W496",
+      "title": "Graduate Algorithms",
+      "days": "TuTh",
+      "start": "15:30",
+      "end": "16:50"
+    }
+  ]
+}

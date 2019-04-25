@@ -1,26 +1,118 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect} from 'react';
 
-function App() {
+const terms = { F: 'Fall', W: 'Winter', S: 'Spring'};
+const days = ['M', 'Tu', 'W', 'Th', 'F'];
+
+const Banner = ({ year }) => (
+  <h1 className="title">CS Course Scheduler for { year }</h1>
+);
+
+const getCourseTerm = course => (
+  terms[course.id.charAt(0)]
+);
+
+const getCourseNumber = course => (
+  course.id.slice(1, 4)
+)
+
+const daysOverlap = (days1, days2) => (
+  days.some(day => days1.includes(day) && days2.includes(day))
+);
+
+const inMinutes = (time) => (
+  (([hh, mm]) => hh * 60 + mm * 1) (time.split(':'))
+);
+
+const timesOverlap = (start1, end1, start2, end2) => (
+  Math.max(inMinutes(start1), inMinutes(start2)) < Math.min(inMinutes(end1), inMinutes(end2))
+);
+
+const courseConflict = (course1, course2) => (
+  course1 !== course2
+  && getCourseTerm(course1) === getCourseTerm(course2)
+  && daysOverlap(course1.days, course2.days)
+  && timesOverlap(course1.start, course1.end, course2.start, course2.end)
+);
+
+const hasConflict = (course, selected) => (
+  selected.some(selection => course !== selection && courseConflict(course, selection))
+);
+
+const buttonState = selected => (
+  selected ? `button is-success is-selected` : 'button'
+)
+
+const TermSelector = ({ state }) => (
+  <div className="field has-addons">
+    { Object.values(terms)
+        .map(value => 
+          <button key={value}
+            className={ buttonState(value === state.term) }
+            onClick={ () => state.setTerm(value) }
+            >
+            { value }
+          </button>
+        )
+    }
+  </div>
+);
+  
+const Course = ({ course, state }) => (
+  <li className="menu-item">
+    <button className={ buttonState(state.selected.includes(course)) }
+      onClick={ () => state.toggle(course) }
+      disabled={ hasConflict(course, state.selected) }
+      >
+      { getCourseTerm(course) } CS { getCourseNumber(course) }: { course.title }
+    </button>
+  </li>
+);
+
+const useSelection = () => {
+  const [selected, setSelected] = useState([]);
+  const toggle = (x) => {
+    setSelected(selected.includes(x) ? selected.filter(y => y !== x) : [x].concat(selected))
+  };
+  return [ selected, toggle ];
+};
+
+const CourseList = ({ courses }) => {
+  const [term, setTerm] = useState('Fall');
+  const [selected, toggle] = useSelection();
+  const termCourses = courses.filter(course => term === getCourseTerm(course));
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <TermSelector state={ { term, setTerm } } />
+      <ul className="menu-list buttons">
+        { termCourses.map(course =>
+           <Course key={ course.id } course={ course } state={ { selected, toggle } } />) }
+      </ul>
+    </React.Fragment>
   );
-}
+};
+
+const App = () => {
+  const [schedule, setSchedule] = useState({ year: 'Loading...', courses: [] });
+  const url = '/data/cs-courses-2019.json';
+
+  useEffect(() => {
+    const fetchSchedule =  async () => {
+      const response = await fetch(url);
+      const json = await response.json();
+      setSchedule(json);
+    }
+    fetchSchedule();
+  }, [])
+
+  return (
+    <section>
+      <div className="container menu">
+        <Banner year={ schedule.year } />
+        <CourseList courses={ schedule.courses } />
+      </div>
+    </section>
+  );
+};
 
 export default App;
