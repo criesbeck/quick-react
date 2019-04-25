@@ -97,7 +97,7 @@ const CourseList = ({ courses }) => {
 
 const App = () => {
   const [schedule, setSchedule] = useState({ year: null, courses: [] });
-  const url = '/data/cs-courses-2019.json';
+  const url = 'http://www.cs.northwestern.edu/academics/courses/394/data/cs-courses.php';
 
   useEffect(() => {
     const fetchSchedule =  async () => {
