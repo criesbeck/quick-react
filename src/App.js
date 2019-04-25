@@ -4,7 +4,9 @@ const terms = { F: 'Fall', W: 'Winter', S: 'Spring'};
 const days = ['M', 'Tu', 'W', 'Th', 'F'];
 
 const Banner = ({ year }) => (
-  <h1 className="title">CS Course Scheduler for { year }</h1>
+  <h1 className="title">
+    CS Course Scheduler for { year || '[loading...]' }
+  </h1>
 );
 
 const getCourseTerm = course => (
@@ -15,23 +17,24 @@ const getCourseNumber = course => (
   course.id.slice(1, 4)
 )
 
-const daysOverlap = (days1, days2) => (
-  days.some(day => days1.includes(day) && days2.includes(day))
+const daysOverlap = (course1, course2) => (
+  days.some(day => course1.days.includes(day) && course2.days.includes(day))
 );
 
 const inMinutes = (time) => (
   (([hh, mm]) => hh * 60 + mm * 1) (time.split(':'))
 );
 
-const timesOverlap = (start1, end1, start2, end2) => (
-  Math.max(inMinutes(start1), inMinutes(start2)) < Math.min(inMinutes(end1), inMinutes(end2))
+const timesOverlap = (course1, course2) => (
+  Math.max(inMinutes(course1.start), inMinutes(course2.start))
+    < Math.min(inMinutes(course1.end), inMinutes(course2.end))
 );
 
 const courseConflict = (course1, course2) => (
   course1 !== course2
   && getCourseTerm(course1) === getCourseTerm(course2)
-  && daysOverlap(course1.days, course2.days)
-  && timesOverlap(course1.start, course1.end, course2.start, course2.end)
+  && daysOverlap(course1, course2)
+  && timesOverlap(course1, course2)
 );
 
 const hasConflict = (course, selected) => (
@@ -93,12 +96,13 @@ const CourseList = ({ courses }) => {
 };
 
 const App = () => {
-  const [schedule, setSchedule] = useState({ year: 'Loading...', courses: [] });
+  const [schedule, setSchedule] = useState({ year: null, courses: [] });
   const url = '/data/cs-courses-2019.json';
 
   useEffect(() => {
     const fetchSchedule =  async () => {
       const response = await fetch(url);
+      if (!response.ok) throw response;
       const json = await response.json();
       setSchedule(json);
     }
