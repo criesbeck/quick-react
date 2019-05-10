@@ -3,10 +3,8 @@ import React, { useState, useEffect} from 'react';
 const terms = { F: 'Fall', W: 'Winter', S: 'Spring'};
 const days = ['M', 'Tu', 'W', 'Th', 'F'];
 
-const Banner = ({ year }) => (
-  <h1 className="title">
-    CS Course Scheduler for { year || '[loading...]' }
-  </h1>
+const Banner = ({ title }) => (
+  <h1 className="title">{ title || '[loading...]' }</h1>
 );
 
 const getCourseTerm = course => (
@@ -96,7 +94,7 @@ const CourseList = ({ courses }) => {
 };
 
 const App = () => {
-  const [schedule, setSchedule] = useState({ year: null, courses: [] });
+  const [schedule, setSchedule] = useState({ title: '', courses: [] });
   const url = 'https://www.cs.northwestern.edu/academics/courses/394/data/cs-courses.php';
 
   useEffect(() => {
@@ -112,7 +110,7 @@ const App = () => {
   return (
     <section>
       <div className="container menu">
-        <Banner year={ schedule.year } />
+        <Banner title={ schedule.title } />
         <CourseList courses={ schedule.courses } />
       </div>
     </section>
