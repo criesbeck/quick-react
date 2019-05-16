@@ -1,11 +1,13 @@
 import React, { useState, useEffect} from 'react';
+import "rbx/index.css";
+import { Button, Container, Title } from "rbx";
 
 const terms = { F: 'Fall', W: 'Winter', S: 'Spring'};
 const days = ['M', 'Tu', 'W', 'Th', 'F'];
 const meetsPat = /^ *((?:M|Tu|W|Th|F)+) +(\d\d?):(\d\d) *[ -] *(\d\d?):(\d\d) *$/;
 
 const Banner = ({ title }) => (
-  <h1 className="title">{ title || '[loading...]' }</h1>
+  <Title>{ title || '[loading...]' }</Title>
 );
 
 const getCourseTerm = course => (
@@ -39,33 +41,32 @@ const hasConflict = (course, selected) => (
 );
 
 const buttonState = selected => (
-  selected ? `button is-success is-selected` : 'button'
+  selected ? `success` : null
 )
 
 const TermSelector = ({ state }) => (
-  <div className="field has-addons">
+  <Button.Group hasAddons>
     { Object.values(terms)
         .map(value => 
-          <button key={value}
-            className={ buttonState(value === state.term) }
+          <Button key={value}
+            color={ buttonState(value === state.term) }
             onClick={ () => state.setTerm(value) }
             >
             { value }
-          </button>
+          </Button>
         )
     }
-  </div>
+  </Button.Group>
 );
   
 const Course = ({ course, state }) => (
-  <li className="menu-item">
-    <button className={ buttonState(state.selected.includes(course)) }
+  <Button
+      color={ buttonState(state.selected.includes(course)) }
       onClick={ () => state.toggle(course) }
       disabled={ hasConflict(course, state.selected) }
       >
       { getCourseTerm(course) } CS { getCourseNumber(course) }: { course.title }
-    </button>
-  </li>
+  </Button>
 );
 
 const useSelection = () => {
@@ -84,10 +85,10 @@ const CourseList = ({ courses }) => {
   return (
     <React.Fragment>
       <TermSelector state={ { term, setTerm } } />
-      <ul className="menu-list buttons">
-        { termCourses.map(course =>
-           <Course key={ course.id } course={ course } state={ { selected, toggle } } />) }
-      </ul>
+      <Button.Group>
+          { termCourses.map(course =>
+            <Course key={ course.id } course={ course } state={ { selected, toggle } } />) }
+      </Button.Group>
     </React.Fragment>
   );
 };
@@ -128,12 +129,10 @@ const App = () => {
   }, [])
 
   return (
-    <section>
-      <div className="container menu">
-        <Banner title={ schedule.title } />
-        <CourseList courses={ schedule.courses } />
-      </div>
-    </section>
+    <Container>
+      <Banner title={ schedule.title } />
+      <CourseList courses={ schedule.courses } />
+    </Container>
   );
 };
 
