@@ -8,12 +8,12 @@ describe ('Test App', () => {
 
   it ('opens with Fall CS courses', () => {
     cy.visit ('/');
-    cy.get('.course').should('contain', 'Fall CS');
+    cy.get('[data-cy=course]').should('contain', 'Fall CS');
   });
 
   it('shows Winter courses when Winter is selected', () => {
     cy.visit ('/');
-    cy.contains('Winter').click();
-    cy.get('.course').should('contain' ,'Winter');
+    cy.get('[data-cy=Winter]').click();
+    cy.get('[data-cy=course]').should('contain' ,'Winter CS');
   });
 });
